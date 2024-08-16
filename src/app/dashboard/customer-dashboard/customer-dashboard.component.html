@@ -1,0 +1,25 @@
+<!-- customer-dashboard.component.html -->
+<div class="dashboard-container">
+    <h2>Customer Dashboard</h2>
+    <div>
+      <h3>Your Bookings</h3>
+      <table>
+        <tr>
+          <th>Trip ID</th>
+          <th>Cab Model</th>
+          <th>Pickup Location</th>
+          <th>Dropoff Location</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let booking of tripBookings">
+          <td>{{ booking.tripId }}</td>
+          <td>{{ booking.cabModel }}</td>
+          <td>{{ booking.pickupLocation }}</td>
+          <td>{{ booking.dropoffLocation }}</td>
+          <td>{{ booking.status }}</td>
+        </tr>
+      </table>
+    </div>
+    <button (click)="bookCab()">Book a Cab</button>
+  </div>
+  

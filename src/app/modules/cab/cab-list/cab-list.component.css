@@ -1,0 +1,20 @@
+.cab-list {
+    padding: 10px;
+  }
+  
+  .cab-list h2 {
+    color: #333;
+  }
+  
+  .cab-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cab-list li {
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+  }
+  

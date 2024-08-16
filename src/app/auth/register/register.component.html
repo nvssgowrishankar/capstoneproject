@@ -1,0 +1,39 @@
+<!-- register.component.html -->
+<div class="register-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="register()">
+      <div>
+        <label for="role">Role</label>
+        <select id="role" [(ngModel)]="role" name="role" required>
+          <option value="customer">Customer</option>
+          <option value="driver">Driver</option>
+        </select>
+      </div>
+      <div *ngIf="role === 'customer'">
+        <label for="username">Username</label>
+        <input type="text" id="username" [(ngModel)]="customerData.username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="customerData.password" name="password" required>
+        <label for="address">Address</label>
+        <input type="text" id="address" [(ngModel)]="customerData.address" name="address">
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" id="mobileNumber" [(ngModel)]="customerData.mobileNumber" name="mobileNumber">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="customerData.email" name="email">
+      </div>
+      <div *ngIf="role === 'driver'">
+        <label for="username">Username</label>
+        <input type="text" id="username" [(ngModel)]="driverData.username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="driverData.password" name="password" required>
+        <label for="licenseNumber">License Number</label>
+        <input type="text" id="licenseNumber" [(ngModel)]="driverData.licenseNumber" name="licenseNumber">
+        <label for="carType">Car Type</label>
+        <input type="text" id="carType" [(ngModel)]="driverData.cabDetails.carType" name="carType">
+        <label for="registrationNumber">Registration Number</label>
+        <input type="text" id="registrationNumber" [(ngModel)]="driverData.cabDetails.registrationNumber" name="registrationNumber">
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,29 @@
+<!-- driver-dashboard.component.html -->
+<div class="dashboard-container">
+    <h2>Driver Dashboard</h2>
+    <div>
+      <h3>Your Trips</h3>
+      <table>
+        <tr>
+          <th>Trip ID</th>
+          <th>Customer</th>
+          <th>Pickup Location</th>
+          <th>Dropoff Location</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let trip of tripBookings">
+          <td>{{ trip.tripId }}</td>
+          <td>{{ trip.customerName }}</td>
+          <td>{{ trip.pickupLocation }}</td>
+          <td>{{ trip.dropoffLocation }}</td>
+          <td>{{ trip.status }}</td>
+          <td>
+            <button (click)="updateTripStatus(trip.tripId, 'Accepted')">Accept</button>
+            <button (click)="updateTripStatus(trip.tripId, 'Rejected')">Reject</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

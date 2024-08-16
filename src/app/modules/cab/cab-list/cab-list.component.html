@@ -1,0 +1,9 @@
+<div class="cab-list">
+    <h2>Available Cabs</h2>
+    <ul>
+      <li *ngFor="let cab of cabs">
+        <strong>{{ cab.carType }}</strong> - {{ cab.registrationNumber }}
+      </li>
+    </ul>
+  </div>
+  
